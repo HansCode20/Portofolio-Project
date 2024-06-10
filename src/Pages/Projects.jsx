@@ -120,6 +120,15 @@ function Projects() {
       techStack: [6,7,11,8],
       githubUrl : "https://github.com/HansCode20/Assigment-Next",
       liveUrl : "https://assigment-next.vercel.app/makanan"
+    },
+    {
+      id: 6,
+      name: 'Fake Store',
+      description: 'Membuat E-commerce dengan memanfaatkan Api dari FakeStore dengan membuat fitur card item Add, remove beserta Lainnya ',
+      img: "",
+      techStack: [5,7,11,8],
+      githubUrl : "https://github.com/HansCode20/Store",
+      liveUrl : "Available"
     }
   ];
 
