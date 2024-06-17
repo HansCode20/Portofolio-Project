@@ -8,6 +8,7 @@ import Travelins from '../assets/Images/Project/Travelins.png';
 import SinarBulan from '../assets/Images/Project/sinar bulan.png';
 import ReactProject from '../assets/Images/Project/React Simple Project.png';
 import NextProject from '../assets/Images/Project/Next Simple Project.png';
+import FakeProject from '../assets/Images/Project/FakeStore.png'
 
 function Projects() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -125,10 +126,10 @@ function Projects() {
       id: 6,
       name: 'Fake Store',
       description: 'Membuat E-commerce dengan memanfaatkan Api dari FakeStore dengan membuat fitur card item Add, remove beserta Lainnya ',
-      img: "",
+      img: FakeProject,
       techStack: [5,7,11,8],
       githubUrl : "https://github.com/HansCode20/Store",
-      liveUrl : "Available"
+      liveUrl : "https://glamour-apparel.vercel.app/"
     }
   ];
 
