@@ -60,6 +60,11 @@ function Skill() {
             name: "Node JS",
             img: "https://img.icons8.com/fluency/node-js.png"
         },
+        {
+            id: 11,  
+            name: "Firebase",
+            img: "https://img.icons8.com/color/firebase.png"
+          }
     ]
 
 

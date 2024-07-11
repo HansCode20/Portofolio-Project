@@ -8,7 +8,7 @@ import Travelins from '../assets/Images/Project/Travelins.png';
 import SinarBulan from '../assets/Images/Project/sinar bulan.png';
 import ReactProject from '../assets/Images/Project/React Simple Project.png';
 import NextProject from '../assets/Images/Project/Next Simple Project.png';
-import FakeProject from '../assets/Images/Project/FakeStore.png'
+import GlamourApparel from '../assets/Images/Project/FakeStore.png'
 
 function Projects() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -73,6 +73,11 @@ function Projects() {
       id: 11,
       name: "Axios",
       img: "https://logowik.com/content/uploads/images/axios3626.jpg"
+    },
+    {
+      id: 12,  
+      name: "Firebase",
+      img: "https://img.icons8.com/color/firebase.png"
     }
   ];
 
@@ -124,10 +129,10 @@ function Projects() {
     },
     {
       id: 6,
-      name: 'Fake Store',
+      name: 'Glamour Apparel Store',
       description: 'Membuat E-commerce dengan memanfaatkan Api dari FakeStore dengan membuat fitur card item Add, remove beserta Lainnya ',
-      img: FakeProject,
-      techStack: [5,7,11,8],
+      img: GlamourApparel ,
+      techStack: [5,7,11,8,12],
       githubUrl : "https://github.com/HansCode20/Store",
       liveUrl : "https://glamour-apparel.vercel.app/"
     }
@@ -152,7 +157,7 @@ function Projects() {
             <img data-aos="fade-up" data-aos-duration="2000" className='group-hover:blur-[3px] transition-all duration-300 ease-out' src={project.img} alt={project.name} />
             <div className='absolute inset-0 flex flex-col justify-end p-6 gap-2 group-hover:bg-opacity-80 group-hover:bg-black transition-all duration-300 ease-out'>
               <h1 className='text-3xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity'>{project.name}</h1>
-              <button className='text-white w-1/4 opacity-0 group-hover:opacity-100 transition-opacity border-2 rounded-lg border-green-500 p-2 hover:bg-green-500' onClick={() => openModal(project)}>
+              <button className='text-white w-1/4 opacity-0 group-hover:opacity-100 transition-opacity border-2 rounded-lg border-white p-2 hover:bg-gray-200 hover:text-black' onClick={() => openModal(project)}>
                 View
               </button>
             </div>
@@ -179,7 +184,7 @@ function Projects() {
                 })}
               </div>
               <div className="modal-action mt-4 flex justify-between">
-                <button className="btn border-2 p-2 rounded-lg border-green-500 hover:bg-green-500" onClick={closeModal}>Close</button>
+                <button className="btn border-2 p-2 rounded-lg bg-black  text-white" onClick={closeModal}>Close</button>
                 <div className='gap-5 flex mt-4'>
                  {currentProject.githubUrl && (
                     <a href={currentProject.githubUrl} target="_blank" rel="noopener noreferrer">
