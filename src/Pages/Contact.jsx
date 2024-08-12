@@ -65,11 +65,12 @@ function Contact() {
           <dialog className="modal modal-bottom sm:modal-middle z-50 rounded-lg w-full max-w-md mx-auto lg:max-w-lg md:max-w-2xl" open>
             <div className="modal-box p-8 bg-white text-black rounded-lg">
               <div className="modal-action flex justify-end ">
-                <button className="btn border-2 py-2 px-4 rounded-full border-green-500 hover:bg-green-500" onClick={closeModal}>X</button>
+                <button className="btn text-xl font-bold" onClick={closeModal}>X</button>
               </div>
-              <h3 className="font-bold text-2xl text-center">Hello!</h3>
-              <hr className='border-2 border-gray-300 '/>
               {!isSent ? (
+                <>   
+                <h3 className="font-bold text-2xl text-center">Hello!</h3>
+                <hr className='border-2 border-gray-300 '/>
                 <form ref={form} onSubmit={sendEmail} className='flex flex-col py-4 gap-3'>
                   <label>Name :</label>
                   <input type="text" name="user_name" className='border-2 border-gray-400 ' required />
@@ -77,10 +78,11 @@ function Contact() {
                   <input type="email" name="user_email" className='border-2 border-gray-400' required />
                   <label>Message :</label>
                   <textarea name="message" className='border-2 border-gray-400' required />
-                  <button type="submit" className='bg-[#ff8c00] w-full p-2 rounded-lg'>
+                  <button type="submit" className='bg-black/80 hover:bg-gray-800 text-white w-full p-2 rounded-lg'>
                     {isLoading ? 'Sending...' : 'Send'}
                   </button>
                 </form>
+                </>
               ) : (
                 <div className='text-center'>
                   <h4 className='text-lg font-bold'>Your message has been sent!</h4>
