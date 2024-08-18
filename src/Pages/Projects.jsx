@@ -8,7 +8,8 @@ import Travelins from '../assets/Images/Project/Travelins.png';
 import SinarBulan from '../assets/Images/Project/sinar bulan.png';
 import ReactProject from '../assets/Images/Project/React Simple Project.png';
 import NextProject from '../assets/Images/Project/Next Simple Project.png';
-import GlamourApparel from '../assets/Images/Project/FakeStore.png'
+import GlamourApparel from '../assets/Images/Project/FakeStore.png';
+import Kabarin from "../assets/Images/Project/Kabarin.png";
 
 function Projects() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -135,6 +136,15 @@ function Projects() {
       techStack: [5,7,11,8,12],
       githubUrl : "https://github.com/HansCode20/Store",
       liveUrl : "https://glamour-apparel.vercel.app/"
+    },
+    {
+      id: 7,
+      name: 'Kabarin',
+      description: 'Membuat Website Berita dengan menggunakan API CNN sumbernya dari github daftar api lokal indonesia dengan menggunakan ',
+      img: Kabarin,
+      techStack: [1, 2, 3, 4, 8],
+      githubUrl : "https://github.com/HansCode20/Portfolio",
+      liveUrl : "https://hanscode20.github.io/Portfolio/"
     }
   ];
 
@@ -157,8 +167,12 @@ function Projects() {
             <img data-aos="fade-up" data-aos-duration="2000" className='group-hover:blur-[3px] transition-all duration-300 ease-out' src={project.img} alt={project.name} />
             <div className='absolute inset-0 flex flex-col justify-end p-6 gap-2 group-hover:bg-opacity-80 group-hover:bg-black transition-all duration-300 ease-out'>
               <h1 className='text-3xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity'>{project.name}</h1>
-              <button className='text-white w-1/4 opacity-0 group-hover:opacity-100 transition-opacity border-2 rounded-lg border-white p-2 hover:bg-gray-200 hover:text-black' onClick={() => openModal(project)}>
-                View
+              <button 
+               className='text-white w-1/4 opacity-0 group-hover:opacity-100 transition-opacity border-2 rounded-lg border-white p-2 hover:bg-gray-200 hover:text-black'
+               onClick={() => project.id !== 7 && openModal(project)}
+               disabled={project.id === 7}
+               >
+                {project.id === 7 ? 'Coming Soon' : 'View Details'}
               </button>
             </div>
           </div>

@@ -27,11 +27,11 @@ function Navbar() {
           <Link to="contact" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link' activeClass='active'>Contact</Link>
         </div>
         <div className='hidden md:flex space-x-4'>
-          <a href="https://www.instagram.com/ilhamfnni_/" className='hover:text-gray-500'>
-          <FaInstagram className='text-2xl' />
+          <a href="https://www.instagram.com/ilhamfnni_/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
+            <FaInstagram className='text-2xl' />
           </a>
-          <a href="https://www.linkedin.com/in/mokhamad-ilham-fanani/" className='hover:text-gray-500'>
-          <FaLinkedin className='text-2xl' />
+          <a href="https://www.linkedin.com/in/mokhamad-ilham-fanani/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
+            <FaLinkedin className='text-2xl' />
           </a>
         </div>
         <div className='flex md:hidden'>
@@ -57,12 +57,12 @@ function Navbar() {
             <Link to="projects" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>Projects</Link>
             <Link to="contact" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>Contact</Link>
             <div className='flex gap-4 text-xl'>
-            <a href="https://www.instagram.com/ilhamfnni_/" className='hover:text-gray-500'>
-            <FaInstagram className='text-2xl' onClick={closeMenu} />
-             </a>
-           <a href="https://www.linkedin.com/in/mokhamad-ilham-fanani/" className='hover:text-gray-500'>
-          <FaLinkedin className='text-2xl' onClick={closeMenu} />
-          </a>
+              <a href="https://www.instagram.com/ilhamfnni_/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
+                <FaInstagram className='text-2xl' onClick={closeMenu} />
+              </a>
+              <a href="https://www.linkedin.com/in/mokhamad-ilham-fanani/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
+                <FaLinkedin className='text-2xl' onClick={closeMenu} />
+              </a>
             </div>
           </div>
         </div>
@@ -72,3 +72,4 @@ function Navbar() {
 }
 
 export default Navbar;
+  
