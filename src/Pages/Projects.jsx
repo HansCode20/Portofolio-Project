@@ -139,12 +139,12 @@ function Projects() {
     },
     {
       id: 7,
-      name: 'Kabarin',
+      name: 'Kabarin News',
       description: 'Membuat Website Berita dengan menggunakan API CNN sumbernya dari github daftar api lokal indonesia dengan menggunakan ',
       img: Kabarin,
       techStack: [1, 2, 3, 4, 8],
-      githubUrl : "https://github.com/HansCode20/Portfolio",
-      liveUrl : "https://hanscode20.github.io/Portfolio/"
+      githubUrl : "https://github.com/HansCode20/Kabarin-News",
+      liveUrl : "https://kabarin-news.vercel.app/"
     }
   ];
 
@@ -169,10 +169,9 @@ function Projects() {
               <h1 className='text-3xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity'>{project.name}</h1>
               <button 
                className='text-white w-1/4 opacity-0 group-hover:opacity-100 transition-opacity border-2 rounded-lg border-white p-2 hover:bg-gray-200 hover:text-black'
-               onClick={() => project.id !== 7 && openModal(project)}
-               disabled={project.id === 7}
+               onClick={() => openModal(project)}
                >
-                {project.id === 7 ? 'Coming Soon' : 'View Details'}
+                View More
               </button>
             </div>
           </div>
