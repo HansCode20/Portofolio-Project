@@ -73,24 +73,10 @@ function Skill() {
         <div className='grid grid-cols-5 lg:flex md:flex justify-center gap-8 mt-10 p-5'>
         {Logos.map((logo) => (
             <div key={logo.id}>
-                <img src={logo.img} alt={logo.name} className='logo hover:scale-125 transition-all duration-300 ease-out' />
+                <img src={logo.img} alt={logo.name} className='w-12 hover:scale-125 transition-all duration-300 ease-out' />
             </div>
         ))}
         </div>
-
-        <style jsx>{`
-                    .logo {
-                        width: 5rem; /* Default size */
-
-                    }
-
-            @media screen and (max-width: 768px) {
-                /* For devices with max width 768px (tablet and below) */
-                .logo {
-                    width: 4rem; /* Adjust size for smaller screens */
-                }
-            }
-        `}</style>
     </div>
   )
 }
