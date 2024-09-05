@@ -161,14 +161,14 @@ function Projects() {
   return (
     <div>
       <h1 data-aos="fade-up" data-aos-duration="2000"  className='py-10 mt-20 text-4xl font-bold text-center'>Projects</h1>
-      <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-3 gap-10 p-4 w-full lg:w-2/3 mx-auto'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2  gap-10 p-4 w-full lg:w-2/3 mx-auto'>
         {projects.map((project) => (
           <div key={project.id} className='relative shadow-2xl rounded-xl overflow-hidden group'>
             <img data-aos="fade-up" data-aos-duration="2000" className='group-hover:blur-[3px] transition-all duration-300 ease-out' src={project.img} alt={project.name} />
             <div className='absolute inset-0 flex flex-col justify-end p-6 gap-2 group-hover:bg-opacity-80 group-hover:bg-black transition-all duration-300 ease-out'>
-              <h1 className='text-3xl font-bold text-white opacity-0 group-hover:opacity-100 transition-opacity'>{project.name}</h1>
+              <h1 className='text-3xl font-bold text-white text-center lg:text-left  opacity-0 group-hover:opacity-100 transition-opacity'>{project.name}</h1>
               <button 
-               className='text-white w-1/4 opacity-0 group-hover:opacity-100 transition-opacity border-2 rounded-lg border-white p-2 hover:bg-gray-200 hover:text-black'
+               className='text-white w-full lg:w-1/3 opacity-0 group-hover:opacity-100 transition-opacity border-2 rounded-lg border-white p-2 hover:bg-gray-200 hover:text-black'
                onClick={() => openModal(project)}
                >
                 View More
@@ -181,7 +181,7 @@ function Projects() {
       {isModalOpen && currentProject && (
         <div className="fixed bg-black/70 inset-0 flex items-center justify-center z-10">
           <div className="absolute inset-0 opacity-50"></div>
-          <dialog className="modal modal-bottom sm:modal-middle z-50 rounded-lg w-full  max-w-md mx-auto lg:max-w-lg md:max-w-2xl" open>
+          <dialog className="modal modal-bottom sm:modal-middle z-50 rounded-lg w-full  max-w-md mx-auto lg:max-w-lg md:max-w-2xl " open>
             <div className="modal-box p-8">
               <h1 className="font-bold text-3xl text-center mb-3">{currentProject.name}</h1>
               <hr className='border-black'/>
