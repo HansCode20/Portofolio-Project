@@ -7,7 +7,7 @@ import About from './About';
 import Projects from './Projects';
 import Skill from './Skill';
 import Contact from './Contact';
-import CV from '../assets/Images/Sertifikat/CV.pdf';
+import CV from '../assets/Images/Sertifikat/Resume.pdf';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 

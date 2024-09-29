@@ -10,6 +10,7 @@ import ReactProject from '../assets/Images/Project/React Simple Project.png';
 import NextProject from '../assets/Images/Project/Next Simple Project.png';
 import GlamourApparel from '../assets/Images/Project/FakeStore.png';
 import Kabarin from "../assets/Images/Project/Kabarin.png";
+import Macom from "../assets/Images/Project/Macom.png";
 
 function Projects() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -145,7 +146,16 @@ function Projects() {
       techStack: [1, 2, 3, 4, 8],
       githubUrl : "https://github.com/HansCode20/Kabarin-News",
       liveUrl : "https://kabarin-news.vercel.app/"
-    }
+    },
+    {
+      id: 8,
+      name: 'Macom',
+      description: 'Membuat Website Manga dengan menggunakan API dari Mangahook',
+      img: Macom,
+      techStack: [1, 2, 3, 4, 8],
+      githubUrl : "",
+      liveUrl : "https://macom.vercel.app/"
+    },
   ];
 
   const openModal = (project) => {
