@@ -1,83 +1,40 @@
 import React, { useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
-import { Autoplay, EffectCreative } from 'swiper/modules';
-import Dibimbing from '../assets/Images/Sertifikat/Dibimbing.png';
-import Edspertsatu from '../assets/Images/Sertifikat/Edspert1.png';
-import Edspertdua from '../assets/Images/Sertifikat/Edspert2.png';
+import meFoto from '../assets/Images/Icon & Logo/About_me.jpg';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
-function About() {
+const About = () => {
+  const linkCertificate = () => {
+    window.open('https://drive.google.com/drive/folders/1P01trNAhiXiCC9_UjH_yfE4XWgSa4uxs?usp=sharing')
+  }
   useEffect(() => {
     aos.init();
   },[])
 
-  const Sertifikat = [
-    {
-      id: 1,
-      Image: Dibimbing,
-    },
-    {
-      id: 2,
-      Image: Edspertsatu,
-    },
-    {
-      id: 3,
-      Image: Edspertdua,
-    }
-  ];
 
   return (
-    <div className='flex flex-col md:flex-row items-center bg-gray-200 m-4 p-10 md:m-10 md:p-10 rounded-lg' id='about'>
-      <div className='grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-5 mb-10'>
-        <div data-aos="zoom-out-down" data-aos-duration="2000"      className='flex flex-col justify-center mb-10 '>
-          <h1 className='text-2xl font-semibold mb-3'>About Me</h1>
-          <p className='text-4xl font-bold w-full lg:w-2/3 md:w-2/3 mb-8'>And My Skill</p>
-          <p className='font-semibold'>
-            With a vocational school education background, I understand the importance of practical skills and direct application in the world of work. With a focus on
-            <span className='font-bold'> front-end development, </span>
-            <br />
-            <br/>
-            I also always follow developments in web technology to be able to apply design principles that are responsive and attractive to user interfaces.
-          </p>
+    <div className='container mx-auto p-5' id='about'>
+      <div className='flex flex-col md:flex-row justify-evenly items-center gap-10'>
+        <div className='relative' data-aos="fade-right" data-aos-duration="2000">
+          <h1 className='text-3xl font-semibold text-white  mb-10 ml-20'>About Me</h1>
+          <img src={meFoto} className='rounded-full w-80 mr-4' /> {/* Add margin-right here */}
+          <div>
+            <button 
+            className='absolute text-black font-semibold bg-white rounded-lg py-2 px-4 bottom-0 right-0 shadow-md shadow-white' 
+            onClick={() => linkCertificate()}>view certificate</button>
+            <img src="https://img.icons8.com/3d-fluency/certificate.png" alt="certificate" className='absolute bottom-6 right-0 w-8 rotate-12'/>
+          </div>
         </div>
-        <div className='flex flex-col justify-center mb-10'>
-          <Swiper
-            data-aos="zoom-in"
-            data-aos-duration="2000"
-            grabCursor={true}
-            effect={'creative'}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            creativeEffect={{
-              prev: {
-                shadow: true,
-                translate: [0, 0, -400],
-              },
-              next: {
-                translate: ['100%', 0, 0],
-              },
-            }}
-            modules={[Autoplay, EffectCreative]}
-            className="mySwiper w-full lg:w-[400px] md:w-2/2" 
-          >
-            {Sertifikat.map((item) => (
-              <SwiperSlide key={item.id}>
-                <img
-                  src={item.Image}
-                  alt={`Certificate ${item.id}`}
-                  className='w-full h-full '
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+        
+        <p className='text-white w-full md:w-1/2 text-justify' data-aos="fade-left" data-aos-duration="2000">
+        With a vocational school background, I understand the importance of hands-on skills across various industries. I emphasize practical application in tasks, including front-end development, but I also bring adaptability to other fields.
+        I'm constantly learning and staying informed about tools and strategies that enhance productivity and efficiency. Currently, I'm pursuing a bachelor's degree in Information Systems at Universitas Terbuka to broaden my expertise, with the flexibility to apply my skills in a range of professional environments beyond IT.
+        </p>
       </div>
     </div>
+
   );
 }
 

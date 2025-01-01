@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-scroll";
-import "./Navbar.css";
+import { LuDownload } from "react-icons/lu";
+import CV from '../../assets/Images/Sertifikat/Resume.pdf';
+import "../../style/Navbar.css";
+
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +16,15 @@ function Navbar() {
     setIsMenuOpen(false);
   };
 
+  const downloadResume = () => {
+     const link = document.createElement('a');
+        link.href = CV;
+        link.download = 'CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+  }
+
   return (
     <div className='bg-black/80 text-white fixed p-5 top-0 w-full z-50'>
       <div className='container flex grid-cols-3  mx-auto justify-between items-center font-semibold'>
@@ -21,19 +32,15 @@ function Navbar() {
           MIF.
         </div>
         <div className='hidden md:flex space-x-12'>
-          <Link to="home" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link' activeClass='active'>Home</Link>
-          <Link to="about" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link' activeClass='active'>About</Link>
-          <Link to="projects" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link' activeClass='active'>Projects</Link>
-          <Link to="contact" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link' activeClass='active'>Contact</Link>
+          <Link to="home" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-normal' activeClass='active'>Home</Link>
+          <Link to="about" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-normal' activeClass='active'>About</Link>
+          <Link to="projects" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-normal' activeClass='active'>Projects</Link>
         </div>
-        <div className='hidden md:flex space-x-4'>
-          <a href="https://www.instagram.com/ilhamfnni_/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
-            <FaInstagram className='text-2xl' />
-          </a>
-          <a href="https://www.linkedin.com/in/mokhamad-ilham-fanani/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
-            <FaLinkedin className='text-2xl' />
-          </a>
-        </div>
+        <button className='hidden md:flex items-center space-x-2' onClick={downloadResume}>
+          <h1 className='font-bold'>Resume</h1>
+          <LuDownload className='text-lg'/>
+        </button>
+
         <div className='flex md:hidden'>
           <button onClick={toggleMenu}>
             <svg className='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
@@ -55,14 +62,8 @@ function Navbar() {
             <Link to="home" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link' >Home</Link>
             <Link to="about" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>About</Link>
             <Link to="projects" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>Projects</Link>
-            <Link to="contact" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>Contact</Link>
             <div className='flex gap-4 text-xl'>
-              <a href="https://www.instagram.com/ilhamfnni_/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
-                <FaInstagram className='text-2xl' onClick={closeMenu} />
-              </a>
-              <a href="https://www.linkedin.com/in/mokhamad-ilham-fanani/" target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
-                <FaLinkedin className='text-2xl' onClick={closeMenu} />
-              </a>
+
             </div>
           </div>
         </div>

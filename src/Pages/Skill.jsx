@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import NextImage from '../assets/Images/NextLogo.svg'
+import NextImage from '../assets/Images/Icon & Logo/NextLogo.svg';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
