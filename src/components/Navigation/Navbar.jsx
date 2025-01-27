@@ -32,9 +32,9 @@ function Navbar() {
           MIF.
         </div>
         <div className='hidden md:flex space-x-12'>
-          <Link to="home" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-normal' activeClass='active'>Home</Link>
-          <Link to="about" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-normal' activeClass='active'>About</Link>
-          <Link to="projects" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-normal' activeClass='active'>Projects</Link>
+          <Link to="home" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-bold' activeClass='active'>Home</Link>
+          <Link to="about" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-bold' activeClass='active'>About</Link>
+          <Link to="projects" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-bold' activeClass='active'>Projects</Link>
         </div>
         <button className='hidden md:flex items-center space-x-2' onClick={downloadResume}>
           <h1 className='font-bold'>Resume</h1>
@@ -62,9 +62,6 @@ function Navbar() {
             <Link to="home" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link' >Home</Link>
             <Link to="about" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>About</Link>
             <Link to="projects" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>Projects</Link>
-            <div className='flex gap-4 text-xl'>
-
-            </div>
           </div>
         </div>
       </div>

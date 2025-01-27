@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
-import 'swiper/css';
-import 'swiper/css/effect-creative';
+import TechStack from'../components/TechStack';
 import meFoto from '../assets/Images/Icon & Logo/About_me.jpg';
 import aos from 'aos';
 import 'aos/dist/aos.css';
@@ -15,9 +14,9 @@ const About = () => {
 
 
   return (
-    <div className='container mx-auto p-5' id='about'>
-      <div className='flex flex-col md:flex-row justify-evenly items-center gap-10'>
-        <div className='relative' data-aos="fade-right" data-aos-duration="2000">
+    <div className='container mx-auto p-5' id='about' data-aos="fade-up" data-aos-duration="3000">
+      <div className='flex flex-col md:flex-row justify-center items-center gap-10'>
+        <div className='relative' >
           <h1 className='text-3xl font-semibold text-white  mb-10 ml-20'>About Me</h1>
           <img src={meFoto} className='rounded-full w-80 mr-4' /> {/* Add margin-right here */}
           <div>
@@ -28,11 +27,17 @@ const About = () => {
           </div>
         </div>
         
-        <p className='text-white w-full md:w-1/2 text-justify' data-aos="fade-left" data-aos-duration="2000">
-        With a vocational school background, I understand the importance of hands-on skills across various industries. I emphasize practical application in tasks, including front-end development, but I also bring adaptability to other fields.
-        I'm constantly learning and staying informed about tools and strategies that enhance productivity and efficiency. Currently, I'm pursuing a bachelor's degree in Information Systems at Universitas Terbuka to broaden my expertise, with the flexibility to apply my skills in a range of professional environments beyond IT.
-        </p>
+        <div className='w-full md:w-1/2 lg:w-1/2 space-y-5'>
+          <p className='text-white w-full text-justify font-semibold'>
+          With a vocational school background, I understand the importance of hands-on skills across various industries. I emphasize practical application in tasks, including front-end development, but I also bring adaptability to other fields.
+          I'm constantly learning and staying informed about tools and strategies that enhance productivity and efficiency. Currently, I'm pursuing a bachelor's degree in Information Systems at Universitas Terbuka to broaden my expertise, with the flexibility to apply my skills in a range of professional environments beyond IT.
+          </p>
+          <TechStack />
+        </div>
+
       </div>
+
+      
     </div>
 
   );

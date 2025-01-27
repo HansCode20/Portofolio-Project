@@ -3,7 +3,7 @@ import Navigation from '../fragment/Navigation';
 import TopContent from '../components/TopContent';
 import About from './About';
 import Projects from './Projects';
-import SkillMarqueAnimation from '../components/SkillMarqueAnimation';
+import ButtonScroll from '../components/ButtonScroll';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,7 +15,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div className="relative bg-black">
       <Navigation>
 
         <div className='py-20'>
@@ -30,9 +30,10 @@ function Home() {
           <Projects />
         </div>
 
-        <div className='py-20'>
-          <SkillMarqueAnimation/>
+        <div className='fixed bottom-5 right-5'>
+          <ButtonScroll/>
         </div>
+
 
       </Navigation>
     </div>

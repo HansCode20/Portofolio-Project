@@ -76,7 +76,7 @@ function Skill() {
                 <img src={logo.img} alt={logo.name} className='w-12 hover:scale-125 transition-all duration-300 ease-out' />
             </div>
         ))}
-        </div>
+        </div>  
     </div>
   )
 }
