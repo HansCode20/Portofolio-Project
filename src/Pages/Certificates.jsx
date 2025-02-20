@@ -49,9 +49,9 @@ const Certificates = () => {
                         />
                         <div className='absolute top-0 right-0'>
                             {awards.id === 1 || awards.id === 2 ? 
-                            <img width="100" height="100" src="https://img.icons8.com/clouds/100/certificate.png" alt="certificate"/>  
+                            <img src="https://img.icons8.com/clouds/certificate.png" alt="certificate" className='w-20'/>  
                             : 
-                            <img width="100" height="100" src="https://img.icons8.com/bubbles/100/certificate.png" alt="certificate"/>
+                            <img src="https://img.icons8.com/bubbles/certificate.png" alt="certificate" className='w-20'/>
                             }
                         </div>
                   </div>
