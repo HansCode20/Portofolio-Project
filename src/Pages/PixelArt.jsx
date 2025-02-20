@@ -20,7 +20,7 @@ const PixelArt = () => {
                  Pixel Art
             </h1>
             <h4 className="container mx-auto text-center w-96 text-[#025a4e]">
-            _,   Some of my pixel art works are themed on One Piece characters and made using the Piskel application.
+                Some of my pixel art works are themed on One Piece characters and made using the Piskel application.
             </h4>
         </div>
 
