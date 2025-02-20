@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-function Footer() {
+function Footer({openModal}) {
   const date = new Date().getFullYear();
 
   const linkFooter = [
-    { id: 1, name: "Github", link: "home" },
-    { id: 2, name: "Instagram", link: "about" },
-    { id: 3, name: "linkedIn", link: "projects" },
-    { id: 4, name: "CV", link: "contact" },
+    { id: 1, name: "Github", link: "https://github.com/HansCode20" },
+    { id: 2, name: "Instagram", link: "https://www.instagram.com/ilhamfnni_/" },
+    { id: 3, name: "linkedIn", link: "https://www.linkedin.com/in/mokhamad-ilham-fanani/" },
+    { id: 4, name: "CV", link: "https://drive.google.com/file/d/1ZMfyZuGFuQdCH2voGjq2bANy6uTgC5Nw/view?usp=sharing" },
   ]
 
   return (
@@ -22,15 +22,15 @@ function Footer() {
             <ul className='flex flex-col gap-4'>
               <h6 className='text-[#025a4e] font-bold text-lg mb-3'>Elsewhere</h6>
               {linkFooter.map((link) => (
-                <li key={link.id} className='text-lg text-[#5a6d68] font-normal'>
-                  <Link to={link.link} smooth={true} duration={1000} className='hover:text-[#025a4e]'>{link.name}</Link>
+                <li key={link.id} className='text-lg text-[#5a6d68] font-normal cursor-pointer'>
+                  <a href={link.link} smooth={true} duration={1000} className='hover:text-[#025a4e]'>{link.name}</a>
                 </li>
               ))}
             </ul>
 
             <ul className='flex flex-col gap-4'>
               <h6 className='text-[#025a4e] font-bold text-lg mb-3'>Contact</h6>
-              <li className='text-lg text-[#5a6d68] font-normal'>Message</li>
+              <li className='text-lg text-[#5a6d68] font-normal cursor-pointer' onClick={openModal}>Message</li>
             </ul>
         </div>
     </footer>
