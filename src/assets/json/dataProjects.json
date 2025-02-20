@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1,
+        "name": "Macom",
+        "date": "2025-01-18",
+        "description": "Anime site whose API comes from the Wajik Anime scraper site, and its main tools use React Js and Tailwind Css.",
+        "img": "/images/Projects/Macom_Web.png",
+        "techStack": [
+            { "id": 1, "name": "HTML", "img": "https://img.icons8.com/color/html-5--v1.png" },
+            { "id": 2, "name": "CSS", "img": "https://img.icons8.com/color/css3.png" },
+            { "id": 3, "name": "Javascript", "img": "https://img.icons8.com/color/javascript--v1.png" },
+            { "id": 4, "name": "React JS", "img": "https://img.icons8.com/color/react-native.png" },
+            { "id": 5, "name": "Tailwind", "img": "https://img.icons8.com/color/tailwind_css.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/Macom",
+        "liveUrl": "https://macom.vercel.app/",
+        "icons" : "https://img.icons8.com/color/react-native.png"
+    },
+    {
+        "id": 2,
+        "name": "Kabarin News",
+        "date": "2024-08-15",
+        "description": "A news website using an API sourced from CNN, obtained from a GitHub repository listing local Indonesian APIs.",
+        "img": "/images/Projects/Kabarin_News.png",
+        "techStack": [
+            { "id": 1, "name": "HTML", "img": "https://img.icons8.com/color/html-5--v1.png" },
+            { "id": 2, "name": "CSS", "img": "https://img.icons8.com/color/css3.png" },
+            { "id": 3, "name": "Javascript", "img": "https://img.icons8.com/color/javascript--v1.png" },
+            { "id": 4, "name": "React JS", "img": "https://img.icons8.com/color/react-native.png" },
+            { "id": 5, "name": "Tailwind", "img": "https://img.icons8.com/color/tailwind_css.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/Kabarin-News",
+        "liveUrl": "https://kabarin-news.vercel.app/",
+        "icons": "https://img.icons8.com/color/react-native.png"
+    },
+    {
+        "id": 3,
+        "name": "Glamour Apparel Store",
+        "date": "2024-07-08",
+        "description": "An e-commerce website utilizing the FakeStore API, featuring item addition and removal functionalities.",
+        "img": "/images/Projects/Glamour_Apparel.png",
+        "techStack": [
+            { "id": 1, "name": "React Vite", "img": "https://img.icons8.com/fluency/vite.png" },
+            { "id": 2, "name": "Redux", "img": "https://img.icons8.com/color/240/redux.png" },
+            { "id": 3, "name": "Axios", "img": "https://icon.icepanel.io/Technology/svg/Azios.svg" },
+            { "id": 4, "name": "Tailwind", "img": "https://img.icons8.com/color/tailwind_css.png" },
+            { "id": 5, "name": "Firebase", "img": "https://img.icons8.com/color/firebase.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/glamour-apparel",
+        "liveUrl": "https://glamour-apparel.vercel.app/",
+        "icons": "https://img.icons8.com/fluency/vite.png"
+    },
+    {
+        "id": 4,
+        "name": "Travelins",
+        "date": "2024-05-05",
+        "description": "Implements CRUD operations using an API from Bootcamp Dibimbing.id. Users can view the initial interface before logging in and manage the dashboard as an Admin.",
+        "img": "/images/Projects/Travelins_Web.png",
+        "techStack": [
+            { "id": 1, "name": "React Vite", "img": "https://img.icons8.com/fluency/vite.png" },
+            { "id": 2, "name": "Axios", "img": "https://icon.icepanel.io/Technology/svg/Azios.svg" },
+            { "id": 3, "name": "Redux", "img": "https://img.icons8.com/color/240/redux.png" },
+            { "id": 4, "name": "Tailwind", "img": "https://img.icons8.com/color/tailwind_css.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/Travelins",
+        "liveUrl": "https://travelins.vercel.app/",
+        "icons": "https://img.icons8.com/fluency/vite.png"
+    },
+    {
+        "id": 5,
+        "name": "Create Food",
+        "date": "2024-03-30",
+        "description": "A food website with Create, Edit, and Delete features built using NextJS and data from the Dibimbing API.",
+        "img": "/images/Projects/Create_Food.png",
+        "techStack": [
+            { "id": 1, "name": "Next", "img": "https://img.icons8.com/color/nextjs.png" },
+            { "id": 2, "name": "Redux", "img": "https://img.icons8.com/color/240/redux.png" },
+            { "id": 3, "name": "Axios", "img": "https://icon.icepanel.io/Technology/svg/Azios.svg" },
+            { "id": 4, "name": "Tailwind", "img": "https://img.icons8.com/color/tailwind_css.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/Assigment-Next",
+        "liveUrl": "https://assigment-next.vercel.app/makanan",
+        "icons": "https://img.icons8.com/color/nextjs.png"
+    },
+    {
+        "id": 6,
+        "name": "Quranku",
+        "date": "2024-03-22",
+        "description": "Utilizes data from the SantriKoding & myQuran APIs to display information on Surahs, Duas, and Asmaul Husna.",
+        "img": "/images/Projects/Quranku_Web.png",
+        "techStack": [
+            { "id": 1, "name": "React Vite", "img": "https://img.icons8.com/fluency/vite.png" },
+            { "id": 2, "name": "Axios", "img": "https://icon.icepanel.io/Technology/svg/Azios.svg" },
+            { "id": 3, "name": "Tailwind", "img": "https://img.icons8.com/color/tailwind_css.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/QuranKu",
+        "liveUrl": "https://quran-ku-kappa.vercel.app/",
+        "icons": "https://img.icons8.com/fluency/vite.png"
+    },
+    {
+        "id": 7,
+        "name": "List User",
+        "date": "2024-03-09",
+        "description": "A user list application with login and registration features, fetching data from the Dibimbing API.",
+        "img": "/images/Projects/Simple_User.png",
+        "techStack": [
+            { "id": 1, "name": "React Vite", "img": "https://img.icons8.com/fluency/vite.png" },
+            { "id": 2, "name": "Axios", "img": "https://icon.icepanel.io/Technology/svg/Azios.svg" },
+            { "id": 3, "name": "Tailwind", "img": "https://img.icons8.com/color/tailwind_css.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/Mini-Project-Rct",
+        "liveUrl": "https://mini-project-rct.vercel.app/",
+        "icons": "https://img.icons8.com/fluency/vite.png"
+    },
+    {
+        "id": 8,
+        "name": "Sinar Bulan",
+        "date": "2024-02-03",
+        "description": "A simple restaurant website built using HTML, CSS, JavaScript, and Bootstrap.",
+        "img": "/images/Projects/Sinar_Bulan.png",
+        "techStack": [
+            { "id": 1, "name": "HTML", "img": "https://img.icons8.com/color/html-5--v1.png" },
+            { "id": 2, "name": "CSS", "img": "https://img.icons8.com/color/css3.png" },
+            { "id": 3, "name": "Bootstrap", "img": "https://img.icons8.com/color/bootstrap--v2.png" },
+            { "id": 4, "name": "Javascript", "img": "https://img.icons8.com/color/javascript--v1.png" }
+        ],
+        "githubUrl": "https://github.com/HansCode20/Sinar-Bulan",
+        "liveUrl" : "https://hanscode20.github.io/MiniProject_MokhamadIlhamFanani/",
+        "icons": "https://img.icons8.com/color/bootstrap--v2.png"
+    }
+]

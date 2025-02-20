@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Suisse Int 3';
+  src: url('../assets//Images/font/acorn-3.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Suisse Int 7';
+  src: url('../assets/Images/font/acorn-7.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(to bottom, #dfe7c9, #f4eee1);
+}
+
+h1,h2,h3 {
+  font-family: 'Suisse Int 3', sans-serif;
+}
+
+/* ul,span {
+  font-family: 'Suisse Int 7', sans-serif;
+} */
+

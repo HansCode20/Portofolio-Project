@@ -7,7 +7,9 @@ module.exports = {
   preset: {
     // Gunakan opsi 'daisyui' untuk memuat DaisyUI tanpa mengganti konfigurasi bawaan
     theme: {
-      extend: {},
+      extend: {
+       
+      },
     },
     plugins: [
       require('daisyui'),

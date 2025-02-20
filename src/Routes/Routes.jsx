@@ -1,6 +1,7 @@
 import Home from "../Pages/Home";
-import About from "../Pages/About";
 import Projects from "../Pages/Projects";
+import PixelArt from "../Pages/PixelArt";
+import Certificates from "../Pages/Certificates";
 
 
 const routeList = [
@@ -9,12 +10,16 @@ const routeList = [
         element: <Home />,
     },
     {
-        path: "/about",
-        element: <About />,
-    },
-    {
         path: "/projects",
         element: <Projects />,
     },
+    {
+        path : "/pixelart",
+        element : <PixelArt/>
+    },
+    {
+        path : "/certificates",
+        element : <Certificates/>
+    }
 ];
 export default routeList;

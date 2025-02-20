@@ -1,33 +1,25 @@
 import React from 'react';
-import NextImage from '../assets/Images/Icon & Logo/NextLogo.svg';
+import techStack from '../assets/json/techStack.json';
 
 const TechStack = () => {
-  const Logos = [
-    { id: 1, name: "HTML", img: "https://img.icons8.com/color/html-5--v1.png" },
-    { id: 2, name: "CSS", img: "https://img.icons8.com/color/css3.png" },
-    { id: 3, name: "Javascript", img: "https://img.icons8.com/color/javascript--v1.png" },
-    { id: 4, name: "React JS", img: "https://img.icons8.com/color/react-native.png" },
-    { id: 5, name: "React Vite", img: "https://img.icons8.com/fluency/vite.png" },
-    { id: 6, name: "Next", img: NextImage },
-    { id: 7, name: "Redux", img: "https://img.icons8.com/color/redux.png" },
-    { id: 8, name: "Tailwind", img: "https://img.icons8.com/color/tailwind_css.png" },
-    { id: 9, name: "Bootstrap", img: "https://img.icons8.com/color/bootstrap--v2.png" },
-    { id: 10, name: "Node JS", img: "https://img.icons8.com/fluency/node-js.png" },
-    { id: 11, name: "Firebase", img: "https://img.icons8.com/color/firebase.png" }
-  ];
 
   return (
-    <>
-      <h1 className='text-white font-bold border-b w-fit'>Tech Stack</h1>
-      <div className='flex flex-wrap gap-4'>
-        {Logos.map((techLogos) => (
-          <div key={techLogos.id} className='flex items-center gap-2 bg-gray-600 p-2 rounded hover:scale-110 transition duration-300 ease-in-out'>
-              <img src={techLogos.img} alt={techLogos.name} className='w-10'/>
-              <span className='text-white font-medium'>{techLogos.name}</span>
-          </div>
-        ))}
-      </div>
-    </>
+    <article className='container mx-auto w-full mt-40'>
+        <h1 className='text-5xl text-center font-bold text-[#025a4e]'>Tech Stack</h1>
+        <div className='grid grid-cols-1 gap-4 mt-10 p-5 md:p-0 lg:p-0'>
+          {techStack.map((techLogos) => (
+            <div key={techLogos.id} className='container mx-auto flex justify-between items-center w-full md:w-3/4 lg:w-1/2 gap-2 bg-white/20  p-7 rounded hover:scale-105 hover:bg-white  transition-all duration-300 ease-in-out'>
+                <div>
+                  <span className='font-medium text-[#025a4e]'>{techLogos.name}</span>
+                  <p className='text-sm text-[#5a6d68]'>{techLogos.description}</p>
+                </div>
+                <div className='bg-white/40 rounded-full p-3'>
+                  <img src={techLogos.img} alt={techLogos.name} className='w-10'/>
+                </div>
+            </div>
+          ))}
+        </div>
+    </article>
   );
 };
 

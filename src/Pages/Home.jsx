@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import Navigation from '../fragment/Navigation';
-import TopContent from '../components/TopContent';
-import About from './About';
-import Projects from './Projects';
-import ButtonScroll from '../components/ButtonScroll';
+import TopContent from './TopContent';
+import About from '../components/About';
+import TechStack from '../components/TechStack';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -15,28 +13,17 @@ function Home() {
   }, []);
 
   return (
-    <div className="relative bg-black">
-      <Navigation>
-
-        <div className='py-20'>
+    <main className="relative container mx-auto space-y-20 ">
+      <div>
           <TopContent />
-        </div>
-
-        <div id="about" className='py-20'>
+      </div>
+      <div>
           <About />
-        </div>
-
-        <div id="projects" className='py-20'>
-          <Projects />
-        </div>
-
-        <div className='fixed bottom-5 right-5'>
-          <ButtonScroll/>
-        </div>
-
-
-      </Navigation>
-    </div>
+      </div>
+      <div>
+        <TechStack />
+      </div>
+    </main>
   );
 }
 

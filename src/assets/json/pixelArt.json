@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "Name" : "Zoro",
+        "img" : "/images/PixelArt/Zoro_PixArt.png",
+        "description" : "Roronoa Zoro, the swordsman of the Straw Hat crew who wields three swords. In this Pixel Art version, he is likely depicted with his signature cool style and green bandana."
+    },
+    {
+        "id" : 2,
+        "Name" : "Sanji",
+        "img" : "/images/PixelArt/Sanji_PixArt.png",
+        "description" : "The StrawThe Straw Hat crew's cook, known for his deadly kicks and love for women. This Pixel Art might show him in his gentlemanly pose Hat crew's cook, known for his deadly kicks and love for women. This Pixel Art might show him in his gentlemanly pose"
+    },
+    {
+        "id" : 3,
+        "Name" : "Usop",
+        "img" : "/images/PixelArt/Usop_PixArt.png",
+        "description" : "The sharpshooter full of imagination! With his long nose and unique fighting style, his Pixel Art version might feature him holding his slingshot."
+    },
+    {
+        "id" : 4,
+        "Name" : "Brook",
+        "img" : "/images/PixelArt/Brook_PixArt.png",
+        "description" : "The musician and living skeleton of the Straw Hat crew. His Pixel Art version likely showcases his iconic afro and guitar."
+    },
+    {
+        "id" : 5,
+        "Name" : "Robin",
+        "img" : "/images/PixelArt/Robin_PixArt.png",
+        "description" : "The intelligent and calm archaeologist. This Pixel Art might depict her serious yet elegant expression, which is her signature look"
+    },
+    {
+        "id" : 6,
+        "Name" : "Zoros and GirlFriend",
+        "img" : "/images/PixelArt/Zoros_PixArt.png",
+        "description" : "A mysterious entry! This could be Zoro alongside an alternate universe (AU) character, or an original character (OC) created by the artist."
+    },  
+    {
+        "id" : 7,
+        "Name" : "Kasumi Chan",
+        "img" : "/images/PixelArt/Kasumi_PixArt.png",
+        "description" : "Kasumi Chan is your secret character or dream figure, making her special!  She could represent an ideal, a story, or a hidden part of yourself."
+    }
+]

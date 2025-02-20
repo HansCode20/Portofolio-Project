@@ -1,73 +1,87 @@
-import React, { useState } from 'react';
-import { Link } from "react-scroll";
-import { LuDownload } from "react-icons/lu";
-import CV from '../../assets/Images/Sertifikat/Resume.pdf';
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../../style/Navbar.css";
 
+function Navbar({ openModal }) {
+  const [isScrolled, setIsScrolled] = useState(false);
 
-function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const navButton = [
+    { id: 1, name: "Home", link: "/" },
+    { id: 2, name: "Projects", link: "/projects" },
+    { id: 3, name: "PixelArt", link: "/pixelart" },
+    { id: 4, name: "Certificates", link: "/certificates" },
+    { id: 5, name: "Contact", action : openModal},
+  ];
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const navButtonIcons = [
+    { id: 1, img: "https://img.icons8.com/material-outlined/home--v2.png", link: "/" },
+    { id: 2, img: "https://img.icons8.com/material-outlined/source-code.png", link: "/projects" },
+    { id: 3, img:  "https://img.icons8.com/hatch/pixel-heart.png", link: "/pixelart" },
+    { id: 4, img: "https://img.icons8.com/sf-regular/certificate.png", link: "/certificates" },
+    { id: 5, img: "https://img.icons8.com/material-outlined/contact-card.png", link: "/" },
+  ];
 
-  const downloadResume = () => {
-     const link = document.createElement('a');
-        link.href = CV;
-        link.download = 'CV.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-  }
 
   return (
-    <div className='bg-black/80 text-white fixed p-5 top-0 w-full z-50'>
-      <div className='container flex grid-cols-3  mx-auto justify-between items-center font-semibold'>
-        <div className='text-2xl font-bold '>
-          MIF.
-        </div>
-        <div className='hidden md:flex space-x-12'>
-          <Link to="home" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-bold' activeClass='active'>Home</Link>
-          <Link to="about" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-bold' activeClass='active'>About</Link>
-          <Link to="projects" spy={true} smooth={true} duration={500} offset={-300} onClick={closeMenu} className='nav-link font-bold' activeClass='active'>Projects</Link>
-        </div>
-        <button className='hidden md:flex items-center space-x-2' onClick={downloadResume}>
-          <h1 className='font-bold'>Resume</h1>
-          <LuDownload className='text-lg'/>
-        </button>
-
-        <div className='flex md:hidden'>
-          <button onClick={toggleMenu}>
-            <svg className='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-              {isMenuOpen ? (
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12' />
-              ) : (
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h16m-7 6h7' />
-              )}
-            </svg>
-          </button>
-        </div>
-        <div className={`md:hidden absolute top-0 left-0 w-full h-screen bg-black text-white z-10 transition-transform transform ${isMenuOpen ? '' : '-translate-x-full'}`}>
-          <div className='flex flex-col items-center justify-center h-full gap-4 text-3xl'>
-            <button onClick={closeMenu} className="absolute top-0 right-0 m-4 text-white">
-              <svg className='w-6 h-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M6 18L18 6M6 6l12 12' />
-              </svg>
+    <div
+      className={`fixed top-6 left-1/2 -translate-x-1/2 w-96 md:w-fit lg:w-fit  px-6 py-4 text-black/60 z-50 ${
+        isScrolled ? "bg-white/50 backdrop-blur-md rounded-full" : "bg-none"
+      } transition-all duration-300 ease-in-out`}
+    >
+      {/* Desktop Navigation */}
+      <div className="hidden md:block md:flex justify-center space-x-5">
+        {navButton.map((item) => (
+          item.action ? (
+            <button
+              key={item.id}
+              onClick={item.action}
+               className="nav-link font-semibold text-md px-4 py-2"
+            >
+              {item.name}
             </button>
-            <Link to="home" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link' >Home</Link>
-            <Link to="about" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>About</Link>
-            <Link to="projects" spy={true} smooth={true} duration={500} onClick={closeMenu} className='nav-link'>Projects</Link>
-          </div>
-        </div>
+          ) : (
+            <NavLink
+              to={item.link}
+              key={item.id}
+              end
+              className={({ isActive }) =>
+                `nav-link font-semibold text-md px-4 py-2 ${isActive ? "bg-white rounded-full transition-all duration-300 ease-in-out" : ""}`
+              }
+            >
+              {item.name}
+            </NavLink>
+          )
+        ))}
       </div>
+
+      {/* Mobile Navigation */}
+      <div className="block md:hidden grid grid-cols-5 gap-5">
+        {navButtonIcons.map((item) => (
+          <NavLink
+            to={item.link}
+            key={item.id}
+            className={({ isActive }) =>
+              `nav-link flex justify-center items-center  px-2 py-3 ${
+                isActive ? "bg-white rounded-full" : ""
+              }`
+            }
+          >
+            <img src={item.img} alt="icon" className="w-6 h-6 object-contain"  />
+          </NavLink>
+        ))}
+      </div>
+
+    
     </div>
   );
 }
 
 export default Navbar;
-  
