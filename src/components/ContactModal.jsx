@@ -8,9 +8,9 @@ const ContactModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-10 right-10 w-80 rounded-lg shadow-lg">
+    <div className="fixed inset-y-0 md:inset-y-auto md:bottom-10 md:right-10  w-full md:w-80 md:rounded-lg shadow-lg z-50 backdrop-blur-lg">
       {/* Header */}
-      <div className="flex justify-between items-center bg-[#025a4e] p-4 rounded-t-lg">
+      <div className="flex justify-between items-center bg-[#025a4e] p-4 md:rounded-t-lg">
         <div className="flex items-center gap-4">
           <img src={Foto} alt="Foto Image" className="w-8 border-2 rounded-full"/>
           <div className="flex flex-col">
@@ -29,12 +29,12 @@ const ContactModal = ({ isOpen, onClose }) => {
         <p className="bg-white w-fit p-2 rounded-lg text-sm">
           Hi, I'm Ilham. How can I help you today?
         </p>
-        <div className="text-right">
+        <div className="text-right py-5">
           <a 
             href={`https://wa.me/${phoneNumber}?text=Halo, saya butuh bantuan!`}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-2 border-[#025a4e] w-fit p-2 rounded-lg text-sm font-medium hover:bg-white  transition-all duration-200 ease-in">
+            className="border-2 border-[#025a4e] w-fit p-2 mb-20 rounded-lg text-sm font-medium hover:bg-white  transition-all duration-200 ease-in">
              Contact Now
           </a>
         </div>
