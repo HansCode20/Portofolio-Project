@@ -18,7 +18,7 @@ const App = () => {
       <Navbar openModal={openModal} />
       {element}
       <ContactModal isOpen={isContactOpen} onClose={closeModal} />
-      <Footer/>
+      <Footer openModal={openModal}/>
     </>
   );
 };
