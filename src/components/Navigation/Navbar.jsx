@@ -26,7 +26,7 @@ function Navbar({ openModal }) {
     { id: 2, img: "https://img.icons8.com/material-outlined/source-code.png", link: "/projects" },
     { id: 3, img:  "https://img.icons8.com/hatch/pixel-heart.png", link: "/pixelart" },
     { id: 4, img: "https://img.icons8.com/sf-regular/certificate.png", link: "/certificates" },
-    { id: 5, img: "https://img.icons8.com/material-outlined/contact-card.png", link: "/" },
+    { id: 5, img: "https://img.icons8.com/material-outlined/contact-card.png", action : openModal },
   ];
 
 
@@ -65,17 +65,26 @@ function Navbar({ openModal }) {
       {/* Mobile Navigation */}
       <div className="block md:hidden grid grid-cols-5 gap-5">
         {navButtonIcons.map((item) => (
+            item.action ? (
+            <button
+            key={item.id}
+            onClick={item.action}
+             className="nav-link font-semibold text-md px-4 py-2"
+          >
+            <img src={item.img} alt="icon" className="w-6 h-6 object-contain"  />
+          </button>
+        ) : (
           <NavLink
             to={item.link}
             key={item.id}
+            end
             className={({ isActive }) =>
-              `nav-link flex justify-center items-center  px-2 py-3 ${
-                isActive ? "bg-white rounded-full" : ""
-              }`
+              `nav-link font-semibold text-md px-2 py-3 ${isActive ? "bg-white rounded-full transition-all duration-300 ease-in-out" : ""}`
             }
           >
-            <img src={item.img} alt="icon" className="w-6 h-6 object-contain"  />
+              <img src={item.img} alt="icon" className="w-6 h-6 object-contain mx-auto"  />
           </NavLink>
+        )
         ))}
       </div>
 
