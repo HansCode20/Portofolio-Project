@@ -32,7 +32,7 @@ function Navbar({ openModal }) {
 
   return (
     <div
-      className={`fixed top-6 left-1/2 -translate-x-1/2 w-96 md:w-fit lg:w-fit  px-6 py-4 text-black/60 z-50 ${
+      className={`fixed top-6 left-1/2 -translate-x-1/2 w-96 md:w-fit lg:w-fit px-8 py-4 text-black/60 z-50 ${
         isScrolled ? "bg-white/50 backdrop-blur-md rounded-full" : "bg-none"
       } transition-all duration-300 ease-in-out`}
     >
