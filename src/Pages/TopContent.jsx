@@ -9,8 +9,8 @@ const TopContent = () => {
     <section className="relative p-8 mt-20">
     {/* Nama */}
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="text-center mt-20"
     >
