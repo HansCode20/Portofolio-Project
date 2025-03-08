@@ -32,7 +32,7 @@ function Navbar({ openModal }) {
 
   return (
     <div
-      className={`fixed top-6 left-1/2 -translate-x-1/2 w-96 md:w-fit lg:w-fit px-8 py-4 text-black/60 z-50 ${
+      className={`fixed top-6 left-1/2 -translate-x-1/2 w-80 md:w-fit lg:w-fit px-4 py-3 text-black/60 z-50 ${
         isScrolled ? "bg-white/50 backdrop-blur-md rounded-full" : "bg-none"
       } transition-all duration-300 ease-in-out`}
     >
@@ -63,7 +63,7 @@ function Navbar({ openModal }) {
       </div>
 
       {/* Mobile Navigation */}
-      <div className="block md:hidden grid grid-cols-5 gap-5">
+      <div className="block md:hidden grid grid-cols-5 gap-3">
         {navButtonIcons.map((item) => (
             item.action ? (
             <button
@@ -71,7 +71,7 @@ function Navbar({ openModal }) {
             onClick={item.action}
              className="nav-link font-semibold text-md px-4 py-2"
           >
-            <img src={item.img} alt="icon" className="w-6 h-6 object-contain"  />
+            <img src={item.img} alt="icon" className="w-4 h-6 object-contain"  />
           </button>
         ) : (
           <NavLink
@@ -79,10 +79,10 @@ function Navbar({ openModal }) {
             key={item.id}
             end
             className={({ isActive }) =>
-              `nav-link font-semibold text-md px-2 py-3 ${isActive ? "bg-white rounded-full transition-all duration-300 ease-in-out" : ""}`
+              `nav-link font-semibold text-md px-2 py-3 ${isActive ? "bg-white rounded-full  transition-all duration-300 ease-in-out" : ""}`
             }
           >
-              <img src={item.img} alt="icon" className="w-6 h-6 object-contain mx-auto"  />
+              <img src={item.img} alt="icon" className="w-4 h-6 object-contain mx-auto"  />
           </NavLink>
         )
         ))}
