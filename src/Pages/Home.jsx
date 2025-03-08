@@ -19,8 +19,8 @@ function Home() {
       {/* TopContent - Fade Up */}
       <motion.div
         ref={topRef}
-        initial={{ opacity: 0, y: 50 }}
-        animate={isTopInView ? { opacity: 1, y: 0 } : {}}
+        initial={{ opacity: 0 }}
+        animate={isTopInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <TopContent />
