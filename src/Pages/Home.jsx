@@ -10,7 +10,7 @@ function Home() {
   const aboutRef = useRef(null);
   const techRef = useRef(null);
 
-  const isTopInView = useInView(topRef, { once: true, margin: "-100px" });
+  const isTopInView = useInView(topRef, { once: true, margin: "-150px" });
   const isAboutInView = useInView(aboutRef, { once: true, margin: "-100px" });
   const isTechInView = useInView(techRef, { once: true, margin: "-100px" });
 

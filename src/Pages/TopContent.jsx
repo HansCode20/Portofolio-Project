@@ -29,8 +29,8 @@ const TopContent = () => {
       >
         {/* Deskripsi */}
         <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="w-full md:w-full lg:w-1/2 space-y-8 order-2 md:order-2 lg:order-1"
         >
